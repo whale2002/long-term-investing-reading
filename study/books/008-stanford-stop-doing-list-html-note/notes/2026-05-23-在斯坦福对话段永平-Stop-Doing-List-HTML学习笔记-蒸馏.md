@@ -1,13 +1,13 @@
 # 在斯坦福对话段永平：Stop Doing List（附学习笔记）蒸馏
 
-来源文件：`fastisslow/在斯坦福对话段永平：Stop Doing List（附学习笔记）.html`
+来源文件：`materials/在斯坦福对话段永平：Stop Doing List（附学习笔记）.html`
 蒸馏日期：2026-05-23
 蒸馏目标：深度学习 Stop Doing List 的思想，把它整理成可复习的投资与做事框架。
 
 ## 资料地图
 
 - 标题：在斯坦福对话段永平：Stop Doing List（附学习笔记）
-- 文件路径：`fastisslow/在斯坦福对话段永平：Stop Doing List（附学习笔记）.html`
+- 文件路径：`materials/在斯坦福对话段永平：Stop Doing List（附学习笔记）.html`
 - 文件类型：SingleFile 保存的 HTML 网页
 - 原网页发布时间：2018/10/03 07:37
 - 来源线索：网页来源标识为格隆汇；正文注明“来源：老喻在加 /孤独大脑”；后半部分说明交流实录来自虎嗅整理。
@@ -190,7 +190,7 @@ Stop Doing List 的核心不是“少做事”，而是用清晰的是非边界�
 
 ## 关联阅读
 
-- `fastisslow/段永平连答49问：成功秘诀在“Stop Doing List”.pdf`：与本文后半部分交流实录主题高度重合，可用于核对问答版本。
-- `fastisslow/段永平：不为清单（Stop Doing List）.pdf`：继续围绕“不为清单”做专题学习。
-- `fastisslow/段永平投资问答录(投资逻辑篇).pdf`：把 Stop Doing List 放回完整投资框架里理解。
-- `fastisslow/段永平投资问答录(商业逻辑篇).pdf`：补充产品、企业文化、商业模式等商业分析角度。
+- `materials/段永平连答49问：成功秘诀在“Stop Doing List”.pdf`：与本文后半部分交流实录主题高度重合，可用于核对问答版本。
+- `materials/段永平：不为清单（Stop Doing List）.pdf`：继续围绕“不为清单”做专题学习。
+- `materials/段永平投资问答录(投资逻辑篇).pdf`：把 Stop Doing List 放回完整投资框架里理解。
+- `materials/段永平投资问答录(商业逻辑篇).pdf`：补充产品、企业文化、商业模式等商业分析角度。

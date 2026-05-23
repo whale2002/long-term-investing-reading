@@ -1,6 +1,6 @@
 # 007 - 在斯坦福对话段永平：Stop Doing List（PDF）
 
-来源文件：`fastisslow/在斯坦福对话段永平：Stop Doing List（附学习笔记）.pdf`
+来源文件：`materials/在斯坦福对话段永平：Stop Doing List（附学习笔记）.pdf`
 
 处理状态：`done`
 

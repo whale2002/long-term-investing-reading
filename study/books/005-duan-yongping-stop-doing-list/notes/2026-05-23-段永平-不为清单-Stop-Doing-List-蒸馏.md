@@ -1,13 +1,13 @@
 # 段永平：不为清单（Stop Doing List）蒸馏
 
-来源文件：`fastisslow/段永平：不为清单（Stop Doing List）.pdf`
+来源文件：`materials/段永平：不为清单（Stop Doing List）.pdf`
 蒸馏日期：2026-05-23
 蒸馏目标：深度学习 + 框架提炼，把一次问答实录整理成可长期复习的“不为清单”投资与经营笔记。
 
 ## 资料地图
 
 - 标题：段永平：不为清单（Stop Doing List）
-- 文件路径：`fastisslow/段永平：不为清单（Stop Doing List）.pdf`
+- 文件路径：`materials/段永平：不为清单（Stop Doing List）.pdf`
 - 文件类型：PDF
 - 篇幅：10 页，提取文本 321 行，约 8700 字符
 - 中间缓存：`study/books/005-duan-yongping-stop-doing-list/cache/source-text.txt`
@@ -317,8 +317,8 @@ Agent 的解释：段永平反对的是盲目追风口，不是反对改进和�
 
 ## 关联阅读
 
-- `fastisslow/段永平投资问答录(商业逻辑篇).pdf`：可进一步展开产品、差异化、企业文化和不为清单。
-- `fastisslow/段永平投资问答录(投资逻辑篇).pdf`：可系统补充买股票就是买公司、能力圈、估值和长期投资。
-- `fastisslow/在斯坦福对话段永平：Stop Doing List（附学习笔记）.pdf`：同一主题的另一份斯坦福资料，可用于交叉核对。
-- `fastisslow/段永平连答49问：成功秘诀在“Stop Doing List”.pdf`：可作为本篇问答主题的延伸阅读。
+- `materials/段永平投资问答录(商业逻辑篇).pdf`：可进一步展开产品、差异化、企业文化和不为清单。
+- `materials/段永平投资问答录(投资逻辑篇).pdf`：可系统补充买股票就是买公司、能力圈、估值和长期投资。
+- `materials/在斯坦福对话段永平：Stop Doing List（附学习笔记）.pdf`：同一主题的另一份斯坦福资料，可用于交叉核对。
+- `materials/段永平连答49问：成功秘诀在“Stop Doing List”.pdf`：可作为本篇问答主题的延伸阅读。
 - 巴菲特股东信与芒格相关访谈：用于理解 right business、right people、right price、能力圈和避免大错。

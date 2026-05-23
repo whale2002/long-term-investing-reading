@@ -1,6 +1,6 @@
 # 在斯坦福对话段永平：Stop Doing List（PDF）蒸馏
 
-来源文件：`fastisslow/在斯坦福对话段永平：Stop Doing List（附学习笔记）.pdf`
+来源文件：`materials/在斯坦福对话段永平：Stop Doing List（附学习笔记）.pdf`
 提取文本：`study/books/007-stanford-stop-doing-list-pdf/cache/source-text.txt`
 蒸馏日期：2026-05-23
 蒸馏目标：深度学习 + 投资框架提炼
@@ -10,7 +10,7 @@
 ## 资料地图
 
 - 标题：在斯坦福对话段永平：Stop Doing List（附学习笔记）
-- 文件路径：`fastisslow/在斯坦福对话段永平：Stop Doing List（附学习笔记）.pdf`
+- 文件路径：`materials/在斯坦福对话段永平：Stop Doing List（附学习笔记）.pdf`
 - 文件类型：PDF
 - 提取方式：使用 `tools/extract_pdf_text.py` 提取到 `cache/source-text.txt`
 - 大致篇幅：16 页，约 520 行提取文本
@@ -269,8 +269,8 @@ Agent 的解释：这里强调的是长期持有的条件，而不是无条件�
 
 ## 关联阅读
 
-- `fastisslow/段永平投资问答录(投资逻辑篇).pdf`：适合继续系统整理段永平的投资原则。
-- `fastisslow/段永平投资问答录(商业逻辑篇).pdf`：适合继续研究产品、企业文化、商业模式和经营原则。
-- `fastisslow/段永平：不为清单（Stop Doing List）.pdf`：适合与本资料对照，专门深化“不做什么”的框架。
-- `fastisslow/段永平连答49问：成功秘诀在“Stop Doing List”.pdf`：适合核对 Stop Doing List 在更多问答中的表达是否一致。
-- `fastisslow/在斯坦福对话段永平：Stop Doing List（附学习笔记）.html`：同主题 HTML 版本，可用于和 PDF 提取文本互相校验。
+- `materials/段永平投资问答录(投资逻辑篇).pdf`：适合继续系统整理段永平的投资原则。
+- `materials/段永平投资问答录(商业逻辑篇).pdf`：适合继续研究产品、企业文化、商业模式和经营原则。
+- `materials/段永平：不为清单（Stop Doing List）.pdf`：适合与本资料对照，专门深化“不做什么”的框架。
+- `materials/段永平连答49问：成功秘诀在“Stop Doing List”.pdf`：适合核对 Stop Doing List 在更多问答中的表达是否一致。
+- `materials/在斯坦福对话段永平：Stop Doing List（附学习笔记）.html`：同主题 HTML 版本，可用于和 PDF 提取文本互相校验。

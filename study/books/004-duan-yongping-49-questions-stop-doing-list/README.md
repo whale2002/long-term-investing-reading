@@ -1,6 +1,6 @@
 # 段永平连答49问：成功秘诀在 Stop Doing List
 
-来源文件：`fastisslow/段永平连答49问：成功秘诀在“Stop Doing List”.pdf`
+来源文件：`materials/段永平连答49问：成功秘诀在“Stop Doing List”.pdf`
 
 处理日期：2026-05-23
 

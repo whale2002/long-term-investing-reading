@@ -1,6 +1,6 @@
 # 在斯坦福对话段永平：Stop Doing List（附学习笔记）
 
-来源文件：fastisslow/在斯坦福对话段永平：Stop Doing List（附学习笔记）.html
+来源文件：materials/在斯坦福对话段永平：Stop Doing List（附学习笔记）.html
 原网页发布时间：2018/10/03 07:37 格隆汇
 文本提取日期：2026-05-23
 提取范围：HTML 中 `#content` 正文区域；已剔除样式、图片、广告、评论区和页脚。

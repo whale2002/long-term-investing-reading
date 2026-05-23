@@ -2,7 +2,7 @@
 
 ## 来源
 
-- 来源文件：`fastisslow/在斯坦福对话段永平：Stop Doing List（附学习笔记）.html`
+- 来源文件：`materials/在斯坦福对话段永平：Stop Doing List（附学习笔记）.html`
 - 文件类型：SingleFile 保存的 HTML 网页
 - 原网页发布时间：2018/10/03 07:37
 - 网页来源标识：格隆汇；正文注明“来源：老喻在加 /孤独大脑”

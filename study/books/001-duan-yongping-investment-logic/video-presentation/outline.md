@@ -358,7 +358,7 @@
 
 ### 1. coldopen
 - ✓ 来源文本：`article.md`
-- ✓ 书籍封面：`/Users/bytedance/Desktop/web-video/fastisslow/static/段永平投资问答录(投资逻辑篇).jpg`
+- ✓ 书籍封面：`/Users/bytedance/Desktop/web-video/materials/static/段永平投资问答录(投资逻辑篇).jpg`
 - ✓ 发布封面文案：长期投资阅读分享 / 第一期 / 段永平投资问答录：投资逻辑篇 / 买股票就是买公司。
 - ⚠️ 若需要段永平真人照片，请用户提供或使用 placeholder；当前建议保持黑白印刷封面，不使用真人图。
 
@@ -420,6 +420,6 @@
 
 ### 16. closing-system
 - ✓ 来源文本：`article.md`
-- ✓ 可关联阅读顺序图：`/Users/bytedance/Desktop/web-video/fastisslow/static/段巴芒阅读顺序.jpg`
+- ✓ 可关联阅读顺序图：`/Users/bytedance/Desktop/web-video/materials/static/段巴芒阅读顺序.jpg`
 - ✓ 分享收尾文案：这就是今天的分享；投资不需要每天都有动作，更重要的是知道什么不该做。
 - ⚠️ 若需要后续阅读书影，请用户提供或使用 placeholder。

@@ -1,6 +1,6 @@
 # 段永平连答49问：成功秘诀在 Stop Doing List
 
-来源文件：`fastisslow/段永平连答49问：成功秘诀在“Stop Doing List”.pdf`
+来源文件：`materials/段永平连答49问：成功秘诀在“Stop Doing List”.pdf`
 
 蒸馏日期：2026-05-23
 
@@ -11,7 +11,7 @@
 | 项目 | 内容 |
 | --- | --- |
 | 标题 | 段永平连答49问：成功秘诀在 “Stop Doing List” |
-| 文件路径 | `fastisslow/段永平连答49问：成功秘诀在“Stop Doing List”.pdf` |
+| 文件路径 | `materials/段永平连答49问：成功秘诀在“Stop Doing List”.pdf` |
 | 文件类型 | PDF |
 | 大致篇幅 | 提取文本显示共 10 页，主体为 49 个问答 |
 | 提取方式 | 使用 `tools/extract_pdf_text.py` 提取到 `cache/source-text.txt` |
@@ -167,12 +167,12 @@ Agent 的解释：这不是永不卖出，而是卖出的理由应来自生意�
 
 ## 关联阅读
 
-1. `fastisslow/段永平：不为清单（Stop Doing List）.pdf`：与本篇主题最直接相关，适合继续深化 Stop Doing List。
+1. `materials/段永平：不为清单（Stop Doing List）.pdf`：与本篇主题最直接相关，适合继续深化 Stop Doing List。
 
-2. `fastisslow/在斯坦福对话段永平：Stop Doing List（附学习笔记）.pdf`：同一主题的延展材料，可用于核对语境和学习笔记。
+2. `materials/在斯坦福对话段永平：Stop Doing List（附学习笔记）.pdf`：同一主题的延展材料，可用于核对语境和学习笔记。
 
-3. `fastisslow/段永平投资问答录(投资逻辑篇).pdf`：适合进一步整理能力圈、长期持有、商业模式和估值问题。
+3. `materials/段永平投资问答录(投资逻辑篇).pdf`：适合进一步整理能力圈、长期持有、商业模式和估值问题。
 
-4. `fastisslow/段永平投资问答录(商业逻辑篇).pdf`：适合进一步研究产品、用户、差异化和企业文化。
+4. `materials/段永平投资问答录(商业逻辑篇).pdf`：适合进一步研究产品、用户、差异化和企业文化。
 
-5. `fastisslow/对话段永平. 2018.09.30 @斯坦福.pdf`：适合与本篇问答互相印证，避免只从单篇摘录理解段永平的表达。
+5. `materials/对话段永平. 2018.09.30 @斯坦福.pdf`：适合与本篇问答互相印证，避免只从单篇摘录理解段永平的表达。
