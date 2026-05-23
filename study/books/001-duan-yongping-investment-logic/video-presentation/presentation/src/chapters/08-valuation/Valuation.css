@@ -1,0 +1,521 @@
+.vl-scene {
+  position: absolute;
+  inset: 0;
+  padding: var(--stage-pad-y) var(--stage-pad-x);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.vl-accent {
+  color: var(--accent);
+}
+
+.vl-kicker {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--text-mute);
+}
+
+.vl-opening {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  align-items: center;
+  gap: 78px;
+}
+
+.vl-opening h1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 28px 0 36px;
+  font-family: var(--font-display-cn);
+  font-size: 118px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.vl-opening p {
+  max-width: 680px;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 34px;
+  line-height: 1.45;
+  color: var(--text-2);
+}
+
+.vl-formula-card {
+  position: relative;
+  z-index: 2;
+  min-height: 540px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, var(--surface-2), var(--surface));
+  box-shadow: var(--card-shadow);
+  animation: vl-paper-in var(--dur-cinematic) var(--ease-quart) both;
+}
+
+.vl-formula-line {
+  position: absolute;
+  left: 42px;
+  top: 40px;
+  font-family: var(--font-display-en);
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text);
+}
+
+.vl-formula-mark {
+  font-size: 250px;
+  color: var(--accent);
+  animation: vl-mark-sink var(--dur-slow) var(--ease-expo) 320ms both;
+}
+
+.vl-formula-foot {
+  position: absolute;
+  left: 42px;
+  right: 42px;
+  bottom: 42px;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-display-cn);
+  font-size: 30px;
+  color: var(--text-2);
+}
+
+.vl-cashflow-arc {
+  position: absolute;
+  left: 176px;
+  bottom: 86px;
+  width: 760px;
+  height: 300px;
+  opacity: 0.56;
+}
+
+.vl-arc-baseline {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 2;
+}
+
+.vl-arc-draw {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: vl-line-draw var(--dur-cinematic) var(--ease-expo) 260ms both;
+}
+
+.vl-flow-dot {
+  opacity: 0;
+  animation: vl-dot-in var(--dur-base) var(--ease-quart) calc(520ms + var(--i) * 120ms) both;
+}
+
+.vl-flow-dot line {
+  stroke: var(--rule);
+  stroke-width: 2;
+}
+
+.vl-flow-dot circle {
+  fill: var(--surface);
+  stroke: var(--accent);
+  stroke-width: 4;
+}
+
+.vl-chain-scene {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  align-items: center;
+  gap: 88px;
+}
+
+.vl-side-title h2,
+.vl-tools-head h2,
+.vl-range-copy h2,
+.vl-fast-panel h2,
+.vl-slow-panel h2 {
+  margin: 28px 0 24px;
+  font-family: var(--font-display-cn);
+  font-size: 86px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.vl-side-title p,
+.vl-range-copy p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 31px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.vl-chain {
+  position: relative;
+  display: grid;
+  gap: 22px;
+}
+
+.vl-chain-node {
+  position: relative;
+  min-height: 96px;
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  align-items: center;
+  border-top: 1px solid var(--rule);
+  background: linear-gradient(90deg, var(--accent-soft), var(--surface));
+  transform: translateX(38px);
+  opacity: 0;
+  animation: vl-node-in var(--dur-slow) var(--ease-quart) calc(var(--i) * 170ms) both;
+}
+
+.vl-chain-index {
+  font-family: var(--font-display-en);
+  font-size: 42px;
+  color: var(--accent);
+}
+
+.vl-chain-node strong {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.vl-chain-node i {
+  position: absolute;
+  left: 46px;
+  bottom: -22px;
+  width: 1px;
+  height: 22px;
+  background: var(--accent);
+  transform-origin: top;
+  animation: vl-vertical-draw var(--dur-base) var(--ease-quart) calc(420ms + var(--i) * 170ms) both;
+}
+
+.vl-tools-scene {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 50px;
+}
+
+.vl-tools-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--rule);
+}
+
+.vl-tool-drawer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.vl-tool {
+  position: relative;
+  min-height: 360px;
+  border-left: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  display: grid;
+  place-items: center;
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+  transform: translateY(70px);
+  opacity: 0;
+  animation: vl-tool-in var(--dur-slow) var(--ease-quart) calc(var(--i) * 130ms) both;
+}
+
+.vl-tool span {
+  font-family: var(--font-display-en);
+  font-size: 74px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+.vl-tool:nth-child(3) span,
+.vl-tool:nth-child(4) span {
+  font-family: var(--font-display-cn);
+  font-size: 58px;
+}
+
+.vl-tool i {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 26px;
+  height: 10px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--accent-soft);
+  transform-origin: left;
+  animation: vl-bar-grow var(--dur-cinematic) var(--ease-expo) calc(360ms + var(--i) * 130ms) both;
+}
+
+.vl-tool-verdict {
+  justify-self: center;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 18px 30px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-display-cn);
+  font-size: 34px;
+  color: var(--text-2);
+}
+
+.vl-tool-verdict strong {
+  color: var(--accent);
+  font-size: 44px;
+  letter-spacing: 0;
+}
+
+.vl-tool-use {
+  position: absolute;
+  right: var(--stage-pad-x);
+  bottom: 82px;
+  font-family: var(--font-mono);
+  font-size: 17px;
+  letter-spacing: 0;
+  color: var(--text-mute);
+}
+
+.vl-range-scene {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.vl-range-board {
+  position: relative;
+  min-height: 560px;
+  display: grid;
+  align-items: center;
+}
+
+.vl-ruler {
+  position: relative;
+  height: 170px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.vl-ruler::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+  height: 1px;
+  background: var(--rule);
+}
+
+.vl-ruler span {
+  position: absolute;
+  top: calc(50% + 34px);
+  transform: translateX(-50%);
+  left: calc(16% + var(--i) * 34%);
+  font-family: var(--font-display-cn);
+  font-size: 32px;
+  color: var(--text-2);
+}
+
+.vl-range-band {
+  position: absolute;
+  left: 33%;
+  right: 31%;
+  top: 42px;
+  bottom: 42px;
+  border-left: 4px solid var(--accent);
+  border-right: 4px solid var(--accent);
+  background: var(--accent-soft);
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: vl-band-open var(--dur-cinematic) var(--ease-expo) both;
+}
+
+.vl-decimals {
+  position: absolute;
+  right: 20px;
+  top: 52px;
+  display: grid;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 22px;
+  color: var(--text-faint);
+}
+
+.vl-decimals span {
+  position: relative;
+  animation: vl-decimal-out var(--dur-slow) var(--ease-quart) both;
+}
+
+.vl-decimals span::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  right: -12px;
+  top: 50%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: vl-line-draw var(--dur-slow) var(--ease-expo) 420ms both;
+}
+
+.vl-final {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: stretch;
+}
+
+.vl-fast-panel,
+.vl-slow-panel {
+  position: relative;
+  padding: 54px 48px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+}
+
+.vl-calculator {
+  margin-top: 62px;
+  display: grid;
+  grid-template-columns: repeat(4, 72px);
+  gap: 18px;
+}
+
+.vl-calculator i {
+  width: 72px;
+  height: 58px;
+  border: 1px solid var(--rule);
+  background: var(--accent-soft);
+  transform: scale(0.72);
+  opacity: 0;
+  animation: vl-key-pop 520ms var(--ease-quart) calc(var(--i) * 45ms) both;
+}
+
+.vl-business-flow {
+  margin-top: 70px;
+  display: grid;
+  gap: 28px;
+}
+
+.vl-business-flow span {
+  display: block;
+  padding: 22px 0 22px 32px;
+  border-left: 8px solid var(--accent);
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text);
+  transform: translateX(44px);
+  opacity: 0;
+  animation: vl-node-in var(--dur-slow) var(--ease-quart) calc(var(--i) * 180ms) both;
+}
+
+@keyframes vl-paper-in {
+  from {
+    opacity: 0;
+    transform: translateY(36px) rotate(2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-1deg);
+  }
+}
+
+@keyframes vl-mark-sink {
+  from {
+    opacity: 0;
+    transform: translateY(-42px) scale(1.18);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes vl-line-draw {
+  to {
+    stroke-dashoffset: 0;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes vl-dot-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vl-node-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes vl-vertical-draw {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes vl-tool-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vl-bar-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes vl-band-open {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes vl-decimal-out {
+  to {
+    color: var(--text-mute);
+  }
+}
+
+@keyframes vl-key-pop {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

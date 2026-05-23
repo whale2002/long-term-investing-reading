@@ -1,0 +1,556 @@
+.cs-scene {
+  position: absolute;
+  inset: 0;
+  padding: var(--stage-pad-y) var(--stage-pad-x);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.cs-accent {
+  color: var(--accent);
+}
+
+.cs-kicker {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  letter-spacing: 0;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.cs-intro {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  align-items: center;
+  gap: 74px;
+}
+
+.cs-intro-copy h1 {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 30px 0 0;
+  font-family: var(--font-display-cn);
+  font-size: 104px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.cs-intro-copy p,
+.cs-netease-copy p,
+.cs-apple-copy p,
+.cs-common-copy p,
+.cs-question-copy p {
+  max-width: 620px;
+  margin: 36px 0 0;
+  font-family: var(--font-body);
+  font-size: 32px;
+  line-height: 1.42;
+  color: var(--text-2);
+  letter-spacing: 0;
+}
+
+.cs-placards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.cs-placard {
+  position: relative;
+  height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 30px;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+  transform: translateY(calc(var(--i) * 34px));
+  opacity: 0;
+  animation: cs-rise var(--dur-slow) var(--ease-quart) calc(var(--i) * 180ms) both;
+}
+
+.cs-placard span {
+  font-family: var(--font-display-cn);
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.cs-placard small {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  letter-spacing: 0;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.cs-notice {
+  position: absolute;
+  right: 144px;
+  bottom: 118px;
+  padding: 18px 28px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: var(--surface);
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0;
+  transform: rotate(-2deg);
+  animation: cs-stamp var(--dur-slow) var(--ease-overshoot) 820ms both;
+}
+
+.cs-moutai,
+.cs-netease,
+.cs-apple,
+.cs-common,
+.cs-questions {
+  display: grid;
+  grid-template-columns: 0.74fr 1.26fr;
+  align-items: center;
+  gap: 76px;
+}
+
+.cs-case-label h2,
+.cs-netease-copy h2,
+.cs-apple-copy h2,
+.cs-common-copy h2,
+.cs-question-copy h2 {
+  margin: 28px 0 0;
+  font-family: var(--font-display-cn);
+  font-size: 86px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.cs-bottle-stage {
+  position: relative;
+  height: 680px;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.cs-bottle {
+  position: absolute;
+  left: 72px;
+  top: 86px;
+  width: 210px;
+  height: 480px;
+  border: 1px solid var(--accent);
+  background: var(--surface);
+  display: grid;
+  place-items: center;
+  animation: cs-bottle-in var(--dur-cinematic) var(--ease-expo) both;
+}
+
+.cs-bottle::before {
+  content: "";
+  position: absolute;
+  top: -78px;
+  left: 54px;
+  width: 102px;
+  height: 78px;
+  border: 1px solid var(--accent);
+  border-bottom: 0;
+  background: var(--surface);
+}
+
+.cs-bottle span {
+  writing-mode: vertical-rl;
+  font-family: var(--font-display-cn);
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.cs-pillars {
+  position: absolute;
+  left: 340px;
+  right: 60px;
+  bottom: 82px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: end;
+  gap: 22px;
+}
+
+.cs-pillar {
+  display: grid;
+  gap: 18px;
+  align-items: end;
+}
+
+.cs-pillar i {
+  height: calc(180px + var(--i) * 48px);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  transform-origin: bottom;
+  transform: scaleY(0);
+  animation: cs-pillar-grow var(--dur-cinematic) var(--ease-expo) calc(var(--i) * 140ms) both;
+}
+
+.cs-pillar span {
+  font-family: var(--font-display-cn);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.cs-game-board {
+  position: relative;
+  height: 650px;
+  border: 1px solid var(--rule);
+  background:
+    repeating-linear-gradient(0deg, var(--surface-3) 0 1px, var(--surface) 1px 92px),
+    repeating-linear-gradient(90deg, var(--surface-3) 0 1px, var(--surface) 1px 92px);
+  overflow: hidden;
+}
+
+.cs-game-tile {
+  position: absolute;
+  left: calc(78px + var(--x) * 310px);
+  top: calc(74px + var(--y) * 116px);
+  width: 260px;
+  height: 98px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  font-family: var(--font-display-cn);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0;
+  box-shadow: var(--card-shadow);
+  opacity: 0;
+  transform: translateY(28px);
+  animation: cs-rise var(--dur-slow) var(--ease-quart) calc(var(--i) * 160ms) both;
+}
+
+.cs-cash-route {
+  position: absolute;
+  left: 54px;
+  right: 54px;
+  bottom: 58px;
+  width: calc(100% - 108px);
+  color: var(--accent);
+}
+
+.cs-cash-route path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 860;
+  stroke-dashoffset: 860;
+  animation: cs-line-draw var(--dur-cinematic) var(--ease-expo) 420ms both;
+}
+
+.cs-device-stage {
+  position: relative;
+  height: 660px;
+  display: grid;
+  place-items: center;
+}
+
+.cs-device {
+  position: relative;
+  width: 230px;
+  height: 430px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--accent);
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+  z-index: 2;
+  animation: cs-device-in var(--dur-cinematic) var(--ease-expo) both;
+}
+
+.cs-device span {
+  font-family: var(--font-display-cn);
+  font-size: 54px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.cs-orbit-line {
+  position: absolute;
+  width: 720px;
+  color: var(--rule);
+}
+
+.cs-orbit-line ellipse {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: cs-line-draw var(--dur-cinematic) var(--ease-expo) 300ms both;
+}
+
+.cs-orbit-item {
+  position: absolute;
+  left: calc(90px + var(--x) * 430px);
+  top: calc(92px + var(--y) * 122px);
+  width: 190px;
+  height: 82px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  font-family: var(--font-display-cn);
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: cs-rise var(--dur-slow) var(--ease-quart) calc(var(--i) * 150ms) both;
+}
+
+.cs-common-map {
+  position: relative;
+  height: 650px;
+}
+
+.cs-common-lines {
+  position: absolute;
+  inset: 40px 0 0;
+  width: 860px;
+  color: var(--accent);
+  z-index: 1;
+}
+
+.cs-common-lines path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: cs-line-draw var(--dur-cinematic) var(--ease-expo) 320ms both;
+}
+
+.cs-common-case {
+  position: absolute;
+  width: 180px;
+  height: 110px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0;
+  z-index: 2;
+  opacity: 0;
+  animation: cs-rise var(--dur-slow) var(--ease-quart) calc(var(--i) * 160ms) both;
+}
+
+.cs-common-case:nth-child(1) {
+  left: 40px;
+  top: 76px;
+}
+
+.cs-common-case:nth-child(2) {
+  left: 40px;
+  bottom: 76px;
+}
+
+.cs-common-case:nth-child(3) {
+  right: 20px;
+  top: 270px;
+}
+
+.cs-understand-core {
+  position: absolute;
+  left: 330px;
+  top: 210px;
+  width: 230px;
+  height: 230px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--accent);
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+  color: var(--accent);
+  font-family: var(--font-display-cn);
+  font-size: 120px;
+  font-weight: 800;
+  letter-spacing: 0;
+  z-index: 3;
+  animation: cs-core-in var(--dur-cinematic) var(--ease-expo) 540ms both;
+}
+
+.cs-question-board {
+  position: relative;
+  height: 650px;
+  border: 1px solid var(--rule);
+  background:
+    repeating-linear-gradient(0deg, var(--surface-3) 0 1px, transparent 1px 86px),
+    var(--surface-2);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.cs-question-spine {
+  position: absolute;
+  left: 50%;
+  top: 86px;
+  width: 210px;
+  height: 388px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--accent);
+  background: var(--surface);
+  color: var(--accent);
+  font-family: var(--font-display-cn);
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: 0;
+  transform: translateX(-50%);
+  z-index: 3;
+  animation: cs-spine-in var(--dur-cinematic) var(--ease-expo) both;
+}
+
+.cs-question-card {
+  position: absolute;
+  top: 235px;
+  width: 220px;
+  min-height: 134px;
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 24px;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+  opacity: 0;
+  transform: translateY(28px);
+  animation: cs-rise var(--dur-slow) var(--ease-quart) calc(320ms + var(--i) * 180ms) both;
+  z-index: 4;
+}
+
+.cs-question-card:nth-of-type(2) {
+  left: 70px;
+}
+
+.cs-question-card:nth-of-type(3) {
+  right: 70px;
+}
+
+.cs-question-card span {
+  font-family: var(--font-display-cn);
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.cs-question-card small {
+  font-family: var(--font-body);
+  font-size: 24px;
+  color: var(--text-2);
+  letter-spacing: 0;
+}
+
+.cs-question-lines {
+  position: absolute;
+  left: 50%;
+  top: 44px;
+  width: 820px;
+  transform: translateX(-50%);
+  color: var(--accent);
+  z-index: 1;
+}
+
+.cs-question-lines path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: cs-line-draw var(--dur-cinematic) var(--ease-expo) 240ms both;
+}
+
+@keyframes cs-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cs-stamp {
+  from {
+    opacity: 0;
+    transform: rotate(-7deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-2deg) scale(1);
+  }
+}
+
+@keyframes cs-bottle-in {
+  from {
+    opacity: 0;
+    transform: translateY(42px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cs-pillar-grow {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes cs-line-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes cs-device-in {
+  from {
+    opacity: 0;
+    transform: rotate(-2deg) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes cs-core-in {
+  from {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cs-spine-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scaleY(0.72);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scaleY(1);
+  }
+}

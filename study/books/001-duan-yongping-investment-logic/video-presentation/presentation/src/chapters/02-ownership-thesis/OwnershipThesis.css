@@ -1,0 +1,472 @@
+.ot-scene {
+  position: absolute;
+  inset: 0;
+  padding: var(--stage-pad-y) var(--stage-pad-x);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.ot-map {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  align-items: center;
+  gap: 72px;
+}
+
+.ot-map-copy h1,
+.ot-contract-card h2,
+.ot-pressure-copy h2,
+.ot-question-title h2,
+.ot-filter-left h2 {
+  margin: 26px 0 0;
+  font-family: var(--font-display-cn);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: 0;
+}
+
+.ot-map-copy h1 {
+  font-size: 106px;
+}
+
+.ot-map-copy p {
+  max-width: 610px;
+  margin: 34px 0 0;
+  font-family: var(--font-body);
+  font-size: 32px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.ot-thesis-rail {
+  position: relative;
+  min-height: 640px;
+  display: grid;
+  align-content: center;
+  gap: 32px;
+}
+
+.ot-thesis-node {
+  position: relative;
+  min-height: 104px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: center;
+  gap: 24px;
+  animation: ot-slide-in var(--dur-slow) var(--ease-quart) calc(var(--i) * 180ms) both;
+}
+
+.ot-thesis-node span {
+  display: grid;
+  place-items: center;
+  height: 104px;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.ot-thesis-node i {
+  height: 1px;
+  background: var(--accent);
+  transform-origin: left;
+  animation: ot-line-grow var(--dur-cinematic) var(--ease-expo) calc(420ms + var(--i) * 170ms) both;
+}
+
+.ot-asset-seal {
+  position: absolute;
+  right: 150px;
+  bottom: 104px;
+  width: 190px;
+  height: 190px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-display-cn);
+  font-size: 64px;
+  font-weight: 800;
+  transform: rotate(-7deg);
+  animation: ot-stamp var(--dur-cinematic) var(--ease-quart) 900ms both;
+}
+
+.ot-constraint {
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.ot-slogan-card {
+  position: relative;
+  min-height: 520px;
+  padding: 60px 54px;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.ot-slogan-card span {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  color: var(--text-mute);
+}
+
+.ot-slogan-card strong {
+  display: block;
+  margin-top: 74px;
+  font-family: var(--font-display-cn);
+  font-size: 86px;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.ot-slogan-card::after {
+  content: "";
+  position: absolute;
+  left: 54px;
+  right: 54px;
+  top: 326px;
+  height: 1px;
+  background: var(--accent);
+  transform-origin: left;
+  animation: ot-line-grow var(--dur-cinematic) var(--ease-expo) 550ms both;
+}
+
+.ot-press-mark {
+  position: absolute;
+  left: 492px;
+  top: 228px;
+  width: 250px;
+  color: var(--accent);
+  opacity: 0.22;
+  animation: ot-press-drop var(--dur-slow) var(--ease-quart) 620ms both;
+}
+
+.ot-press-mark svg {
+  width: 100%;
+}
+
+.ot-press-mark circle,
+.ot-press-mark path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 14;
+  stroke-linecap: round;
+}
+
+.ot-contract-card h2 {
+  max-width: 760px;
+  font-size: 104px;
+}
+
+.ot-contract-card p {
+  max-width: 720px;
+  margin: 36px 0 0;
+  padding-top: 30px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-body);
+  font-size: 36px;
+  line-height: 1.44;
+  color: var(--text-2);
+}
+
+.ot-pressure {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.ot-pressure-copy h2 {
+  font-size: 104px;
+}
+
+.ot-pressure-copy p {
+  max-width: 550px;
+  margin: 34px 0 0;
+  font-family: var(--font-body);
+  font-size: 32px;
+  line-height: 1.48;
+  color: var(--text-2);
+}
+
+.ot-pressure-board {
+  position: relative;
+  min-height: 640px;
+  border-left: 1px solid var(--rule);
+  padding-left: 64px;
+}
+
+.ot-crash-chart {
+  width: 820px;
+  height: 390px;
+  margin-top: 36px;
+}
+
+.ot-grid-line {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
+.ot-crash-path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-dasharray: 990;
+  stroke-dashoffset: 990;
+  animation: ot-draw-path var(--dur-cinematic) var(--ease-expo) both;
+}
+
+.ot-crash-dot {
+  fill: var(--surface);
+  stroke: var(--accent);
+  stroke-width: 5;
+  opacity: 0;
+  animation: ot-dot-in var(--dur-base) var(--ease-quart) 950ms both;
+}
+
+.ot-anchor-card {
+  position: absolute;
+  right: 56px;
+  bottom: 54px;
+  width: 360px;
+  padding: 30px 34px;
+  border: 1px solid var(--accent);
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+  animation: ot-anchor-rise var(--dur-slow) var(--ease-quart) 780ms both;
+}
+
+.ot-anchor-card span {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: var(--text-mute);
+}
+
+.ot-anchor-card strong {
+  display: block;
+  margin-top: 16px;
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  line-height: 1.15;
+}
+
+.ot-noise {
+  position: absolute;
+  min-width: 112px;
+  padding: 16px 18px;
+  border: 1px solid var(--rule);
+  background: var(--surface-3);
+  font-family: var(--font-display-cn);
+  font-size: 28px;
+  color: var(--text-mute);
+  animation: ot-noise-drift var(--dur-slow) var(--ease-quart) both;
+}
+
+.ot-noise-a {
+  right: 116px;
+  top: 62px;
+}
+
+.ot-noise-b {
+  left: 102px;
+  bottom: 154px;
+  animation-delay: 220ms;
+}
+
+.ot-noise-c {
+  right: 288px;
+  top: 254px;
+  animation-delay: 380ms;
+}
+
+.ot-questions {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.ot-question-title h2 {
+  font-size: 108px;
+}
+
+.ot-question-form {
+  position: relative;
+  display: grid;
+  gap: 26px;
+  padding: 36px 0 36px 62px;
+  border-left: 1px solid var(--rule);
+}
+
+.ot-question-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 126px 1fr 140px;
+  align-items: center;
+  gap: 28px;
+  min-height: 132px;
+  padding: 0 26px 0 0;
+  border-bottom: 1px solid var(--rule);
+  opacity: 0;
+  animation: ot-form-row var(--dur-slow) var(--ease-quart) calc(var(--i) * 360ms) both;
+}
+
+.ot-question-row span {
+  font-size: 74px;
+  color: var(--accent);
+}
+
+.ot-question-row strong {
+  font-family: var(--font-display-cn);
+  font-size: 46px;
+  line-height: 1.18;
+}
+
+.ot-question-row i {
+  height: 28px;
+  border: 1px solid var(--accent);
+  background: var(--accent-soft);
+  transform-origin: left;
+  animation: ot-checkbox-fill var(--dur-slow) var(--ease-expo) calc(900ms + var(--i) * 360ms) both;
+}
+
+.ot-scan-line {
+  position: absolute;
+  top: 36px;
+  bottom: 36px;
+  left: 52px;
+  width: 4px;
+  background: var(--accent);
+  transform-origin: top;
+  animation: ot-scan var(--dur-cinematic) var(--ease-expo) 500ms both;
+}
+
+.ot-filter {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 84px;
+  align-items: center;
+}
+
+.ot-filter-left h2 {
+  font-size: 96px;
+}
+
+.ot-reason-stack {
+  position: relative;
+  min-height: 620px;
+}
+
+.ot-bad-reason {
+  position: absolute;
+  left: calc(var(--i) * 82px);
+  top: calc(78px + var(--i) * 154px);
+  width: 610px;
+  min-height: 166px;
+  padding: 34px 40px;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+  animation: ot-reason-in var(--dur-slow) var(--ease-quart) calc(var(--i) * 260ms) both;
+}
+
+.ot-bad-reason span {
+  display: block;
+  font-family: var(--font-display-cn);
+  font-size: 54px;
+  font-weight: 800;
+}
+
+.ot-bad-reason b {
+  display: block;
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  color: var(--text-mute);
+}
+
+.ot-filter-stamp {
+  position: absolute;
+  right: 46px;
+  bottom: 88px;
+  width: 470px;
+  height: 150px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-display-en);
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  transform: rotate(-5deg);
+  animation: ot-stamp var(--dur-cinematic) var(--ease-quart) 620ms both;
+}
+
+@keyframes ot-slide-in {
+  from { opacity: 0; transform: translateX(48px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ot-line-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes ot-stamp {
+  from { opacity: 0; transform: translateY(42px) rotate(-10deg) scale(1.12); }
+  to { opacity: 1; transform: translateY(0) rotate(-7deg) scale(1); }
+}
+
+@keyframes ot-press-drop {
+  from { opacity: 0; transform: translateY(-48px) scale(1.12); }
+  to { opacity: 0.22; transform: translateY(0) scale(1); }
+}
+
+@keyframes ot-draw-path {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes ot-dot-in {
+  to { opacity: 1; }
+}
+
+@keyframes ot-anchor-rise {
+  from { opacity: 0; transform: translateY(38px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ot-noise-drift {
+  from { opacity: 0; transform: translateY(24px) rotate(-4deg); }
+  to { opacity: 1; transform: translateY(0) rotate(-4deg); }
+}
+
+@keyframes ot-form-row {
+  from { opacity: 0; transform: translateX(36px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ot-checkbox-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes ot-scan {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+@keyframes ot-reason-in {
+  from { opacity: 0; transform: translateY(46px) rotate(2deg); }
+  to { opacity: 1; transform: translateY(0) rotate(-1deg); }
+}

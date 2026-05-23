@@ -1,0 +1,20 @@
+.DS_Store
+**/.DS_Store
+
+# Dependency directories
+**/node_modules/
+
+# Build output and local caches
+**/dist/
+**/.vite/
+**/.tmp/
+**/*.tsbuildinfo
+*.log
+
+# Local environment / credentials
+.env
+.env.*
+!.env.example
+
+# Nested repository metadata from source-material folders
+**/.git/

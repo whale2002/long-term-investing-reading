@@ -1,0 +1,482 @@
+.bc-scene {
+  color: var(--text);
+}
+
+.bc-scene .kicker {
+  font-size: 19px;
+}
+
+.bc-scene .label-mono {
+  font-size: 17px;
+}
+
+.bc-scene em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.bc-rule-set {
+  position: absolute;
+  top: 98px;
+  right: 138px;
+  width: 150px;
+  display: grid;
+  gap: 12px;
+}
+
+.bc-rule-set span {
+  height: 1px;
+  background: var(--rule);
+  transform-origin: right;
+  animation: bc-rule-in 1100ms var(--ease-expo) both;
+}
+
+.bc-rule-set span:nth-child(2) {
+  width: 74%;
+  justify-self: end;
+  animation-delay: 140ms;
+}
+
+.bc-rule-set span:nth-child(3) {
+  width: 45%;
+  justify-self: end;
+  animation-delay: 260ms;
+}
+
+.bc-step-equivalence {
+  justify-content: center;
+}
+
+.bc-equivalence-head {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 68px;
+}
+
+.bc-equivalence-head h2,
+.bc-before-copy h2,
+.bc-question-title h2,
+.bc-operator-copy h2,
+.bc-cashflow-copy h2 {
+  margin: 0;
+  font-size: 108px;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.bc-equivalence-board {
+  display: grid;
+  grid-template-columns: 1fr 160px 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.bc-role-card {
+  min-height: 245px;
+  padding: 34px;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(28px);
+  animation: bc-card-rise 850ms var(--ease-quart) forwards;
+}
+
+.bc-role-card:nth-child(3) {
+  animation-delay: 280ms;
+}
+
+.bc-role-card strong {
+  max-width: 9ch;
+  font-size: 54px;
+  line-height: 1.16;
+}
+
+.bc-equals {
+  height: 80px;
+  position: relative;
+}
+
+.bc-equals span,
+.bc-equals::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: bc-line-grow 1150ms var(--ease-expo) 520ms forwards;
+}
+
+.bc-equals span {
+  top: 26px;
+}
+
+.bc-equals::before {
+  bottom: 26px;
+}
+
+.bc-equivalence-foot {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 24px;
+  color: var(--text-2);
+  font-size: 28px;
+}
+
+.bc-equivalence-foot span {
+  border-top: 1px solid var(--rule);
+  padding-top: 18px;
+}
+
+.bc-step-operator {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  gap: 92px;
+  align-items: center;
+}
+
+.bc-operator-copy {
+  display: grid;
+  gap: 30px;
+}
+
+.bc-operator-copy p {
+  margin: 0;
+  max-width: 430px;
+  font-size: 30px;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+
+.bc-desk {
+  padding: 44px;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+}
+
+.bc-desk-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.bc-price-tag {
+  position: relative;
+  color: var(--text-mute);
+  font-size: 34px;
+}
+
+.bc-price-tag::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  top: 52%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: bc-line-grow 900ms var(--ease-expo) 700ms forwards;
+}
+
+.bc-ledger {
+  display: grid;
+  margin-top: 32px;
+}
+
+.bc-ledger-row {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 26px;
+  align-items: center;
+  min-height: 80px;
+  border-bottom: 1px solid var(--rule);
+  opacity: 0;
+  transform: translateX(20px);
+  animation: bc-row-in 750ms var(--ease-quart) forwards;
+  animation-delay: calc(160ms + var(--i) * 140ms);
+}
+
+.bc-ledger-row span {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.bc-ledger-row i {
+  display: block;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: bc-line-grow 1000ms var(--ease-expo) forwards;
+  animation-delay: calc(520ms + var(--i) * 160ms);
+}
+
+.bc-step-before-price {
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 120px;
+  align-items: center;
+}
+
+.bc-price-cross {
+  position: relative;
+  min-height: 360px;
+  padding: 42px;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bc-price-cross strong {
+  font-size: 82px;
+  line-height: 1.05;
+  color: var(--text-mute);
+}
+
+.bc-price-cross i {
+  position: absolute;
+  left: 42px;
+  right: 42px;
+  top: 52%;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0) rotate(-7deg);
+  transform-origin: left;
+  animation: bc-cross-in 950ms var(--ease-expo) 360ms forwards;
+}
+
+.bc-before-copy {
+  display: grid;
+  gap: 28px;
+}
+
+.bc-before-copy h2 {
+  display: grid;
+  gap: 12px;
+}
+
+.bc-step-questions {
+  justify-content: center;
+}
+
+.bc-question-title {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 46px;
+}
+
+.bc-triangle {
+  position: relative;
+  height: 560px;
+}
+
+.bc-triangle svg {
+  position: absolute;
+  inset: 18px 350px 0 350px;
+  width: calc(100% - 700px);
+  height: 520px;
+  overflow: visible;
+}
+
+.bc-triangle path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: bc-svg-draw 1700ms var(--ease-expo) 420ms forwards;
+}
+
+.bc-question-card {
+  position: absolute;
+  width: 420px;
+  min-height: 176px;
+  padding: 28px;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: bc-card-rise 800ms var(--ease-quart) forwards;
+}
+
+.bc-question-card .hero-num {
+  position: absolute;
+  right: 22px;
+  top: 12px;
+  font-size: 118px;
+  color: var(--text-faint);
+}
+
+.bc-question-card strong {
+  position: relative;
+  max-width: 9ch;
+  font-size: 42px;
+  line-height: 1.15;
+  z-index: 1;
+}
+
+.bc-q-1 {
+  left: 50%;
+  top: 0;
+  margin-left: -210px;
+  animation-delay: 160ms;
+}
+
+.bc-q-2 {
+  left: 210px;
+  bottom: 0;
+  animation-delay: 420ms;
+}
+
+.bc-q-3 {
+  right: 210px;
+  bottom: 0;
+  animation-delay: 680ms;
+}
+
+.bc-step-cashflow {
+  justify-content: center;
+}
+
+.bc-cashflow-copy {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 54px;
+}
+
+.bc-cashflow-copy h2 {
+  display: flex;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+
+.bc-cashflow-system {
+  position: relative;
+  height: 470px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.bc-system-node {
+  position: absolute;
+  top: 98px;
+  width: 410px;
+  min-height: 208px;
+  padding: 30px;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.bc-system-node:nth-child(1) {
+  left: 96px;
+}
+
+.bc-system-node:nth-child(2) {
+  right: 96px;
+  border-color: var(--accent);
+}
+
+.bc-system-node strong {
+  font-size: 48px;
+  line-height: 1.12;
+}
+
+.bc-cashflow-system svg {
+  position: absolute;
+  left: 195px;
+  right: 195px;
+  top: 52px;
+  width: calc(100% - 390px);
+  height: 360px;
+  z-index: 1;
+}
+
+.bc-loop-main,
+.bc-loop-back {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: bc-svg-draw 1800ms var(--ease-expo) forwards;
+}
+
+.bc-loop-back {
+  stroke: var(--text-faint);
+  animation-delay: 420ms;
+}
+
+.bc-cashflow-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 42px;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: var(--text-2);
+}
+
+.bc-layer-strip {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.bc-layer-strip span {
+  border-top: 1px solid var(--rule);
+  padding-top: 16px;
+  font-size: 24px;
+  color: var(--text-2);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: bc-layer-in 760ms var(--ease-quart) forwards;
+  animation-delay: calc(620ms + var(--i) * 120ms);
+}
+
+@keyframes bc-rule-in {
+  from { transform: scaleX(0); opacity: 0; }
+  to { transform: scaleX(1); opacity: 1; }
+}
+
+@keyframes bc-card-rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bc-line-grow {
+  to { transform: scaleX(1); }
+}
+
+@keyframes bc-cross-in {
+  to { transform: scaleX(1) rotate(-7deg); }
+}
+
+@keyframes bc-row-in {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bc-svg-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes bc-layer-in {
+  to { opacity: 1; transform: translateY(0); }
+}

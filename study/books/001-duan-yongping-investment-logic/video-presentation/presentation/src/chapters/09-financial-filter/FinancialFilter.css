@@ -1,0 +1,449 @@
+.ff-scene {
+  position: absolute;
+  inset: 0;
+  padding: var(--stage-pad-y) var(--stage-pad-x);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.ff-accent {
+  color: var(--accent);
+}
+
+.ff-kicker {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--text-mute);
+}
+
+.ff-opening {
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  align-items: center;
+  gap: 82px;
+}
+
+.ff-opening h1 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 0 34px;
+  font-family: var(--font-display-cn);
+  font-size: 112px;
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.ff-opening p,
+.ff-risk-copy p,
+.ff-signal-copy p {
+  max-width: 680px;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 32px;
+  line-height: 1.48;
+  color: var(--text-2);
+}
+
+.ff-filter-card {
+  position: relative;
+  min-height: 610px;
+  display: grid;
+  place-items: center;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+  animation: ff-paper-in var(--dur-cinematic) var(--ease-quart) both;
+}
+
+.ff-filter-glyph {
+  width: 520px;
+  height: 460px;
+}
+
+.ff-filter-outline {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 4;
+}
+
+.ff-filter-fill {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 5;
+  stroke-dasharray: 1320;
+  stroke-dashoffset: 1320;
+  animation: ff-draw-stroke var(--dur-cinematic) var(--ease-expo) 260ms both;
+}
+
+.ff-filter-line {
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+  opacity: 0;
+  animation: ff-line-drop var(--dur-base) var(--ease-quart) calc(620ms + var(--i) * 120ms) both;
+}
+
+.ff-filter-caption {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 42px;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-display-cn);
+  font-size: 32px;
+  color: var(--text-2);
+}
+
+.ff-first-filter {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 56px;
+}
+
+.ff-title-row {
+  border-bottom: 1px solid var(--rule);
+}
+
+.ff-title-row h2,
+.ff-risk-copy h2,
+.ff-signal-copy h2,
+.ff-final-head h2 {
+  margin: 26px 0 24px;
+  font-family: var(--font-display-cn);
+  font-size: 88px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.ff-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.ff-filter-tile {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 46px 34px 42px;
+  border-left: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  background: linear-gradient(180deg, var(--surface-2), var(--surface));
+  box-shadow: var(--card-shadow);
+  transform: translateY(74px);
+  opacity: 0;
+  animation: ff-tile-in var(--dur-slow) var(--ease-quart) calc(var(--i) * 160ms) both;
+}
+
+.ff-filter-tile span {
+  align-self: center;
+  font-family: var(--font-display-cn);
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.ff-filter-tile strong {
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-body);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.ff-filter-tile i {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  bottom: 92px;
+  height: 8px;
+  background: var(--accent-soft);
+  transform-origin: left;
+  animation: ff-bar-grow var(--dur-cinematic) var(--ease-expo) calc(460ms + var(--i) * 160ms) both;
+}
+
+.ff-hidden-risk {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  align-items: center;
+  gap: 72px;
+}
+
+.ff-risk-board {
+  position: relative;
+  min-height: 640px;
+}
+
+.ff-report-page {
+  position: absolute;
+  inset: 16px 130px 28px 60px;
+  padding: 70px 56px;
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+  transform: rotate(-2deg);
+}
+
+.ff-report-page i {
+  display: block;
+  height: 18px;
+  margin-bottom: 32px;
+  background: var(--accent-soft);
+  border-top: 1px solid var(--rule);
+  transform-origin: left;
+  animation: ff-bar-grow var(--dur-slow) var(--ease-expo) calc(var(--i) * 80ms) both;
+}
+
+.ff-report-page i:nth-child(2n) {
+  width: 78%;
+}
+
+.ff-report-page i:nth-child(3n) {
+  width: 56%;
+}
+
+.ff-magnifier {
+  position: absolute;
+  right: 42px;
+  top: 110px;
+  width: 230px;
+  height: 230px;
+  border: 6px solid var(--accent);
+  border-radius: 50%;
+  background: var(--accent-soft);
+  transform: translateX(60px) rotate(8deg);
+  animation: ff-lens-in var(--dur-cinematic) var(--ease-quart) 200ms both;
+}
+
+.ff-magnifier::after {
+  content: "";
+  position: absolute;
+  right: -90px;
+  bottom: -42px;
+  width: 130px;
+  height: 7px;
+  background: var(--accent);
+  transform: rotate(38deg);
+  transform-origin: left;
+}
+
+.ff-risk-tags {
+  position: absolute;
+  right: 16px;
+  bottom: 58px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, auto));
+  gap: 16px;
+}
+
+.ff-risk-tags span {
+  padding: 14px 18px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+  font-family: var(--font-display-cn);
+  font-size: 28px;
+  color: var(--text-2);
+  transform: translateY(22px);
+  opacity: 0;
+  animation: ff-tag-in var(--dur-base) var(--ease-quart) calc(560ms + var(--i) * 100ms) both;
+}
+
+.ff-signal {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.ff-signal-mark {
+  font-size: 300px;
+  color: var(--accent);
+  justify-self: center;
+  animation: ff-mark-hit var(--dur-cinematic) var(--ease-expo) both;
+}
+
+.ff-signal-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.ff-cross-lines {
+  position: absolute;
+  inset: var(--stage-pad-y) var(--stage-pad-x);
+  pointer-events: none;
+  opacity: 0.38;
+}
+
+.ff-cross-lines i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0) rotate(-8deg);
+  transform-origin: left;
+  animation: ff-cross-in var(--dur-cinematic) var(--ease-expo) both;
+}
+
+.ff-cross-lines i:nth-child(1) {
+  top: 26%;
+}
+
+.ff-cross-lines i:nth-child(2) {
+  top: 52%;
+  animation-delay: 160ms;
+}
+
+.ff-cross-lines i:nth-child(3) {
+  top: 74%;
+  animation-delay: 320ms;
+}
+
+.ff-final {
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  align-items: center;
+  gap: 76px;
+}
+
+.ff-check-panel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.ff-check-item {
+  position: relative;
+  min-height: 220px;
+  padding: 34px 30px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface-2);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transform: translateY(44px);
+  opacity: 0;
+  animation: ff-tile-in var(--dur-slow) var(--ease-quart) calc(var(--i) * 150ms) both;
+}
+
+.ff-check-index {
+  display: block;
+  margin-bottom: 32px;
+  font-family: var(--font-display-en);
+  font-size: 42px;
+  color: var(--accent);
+}
+
+.ff-check-item strong {
+  font-family: var(--font-display-cn);
+  font-size: 44px;
+  line-height: 1.14;
+  letter-spacing: 0;
+}
+
+.ff-check-item i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 12px;
+  background: var(--accent-soft);
+  transform: translateX(-100%);
+  animation: ff-scan var(--dur-cinematic) var(--ease-expo) calc(420ms + var(--i) * 120ms) both;
+}
+
+@keyframes ff-paper-in {
+  from {
+    opacity: 0;
+    transform: translateY(36px) rotate(2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-1deg);
+  }
+}
+
+@keyframes ff-draw-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ff-line-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ff-tile-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ff-bar-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes ff-lens-in {
+  from {
+    opacity: 0;
+    transform: translateX(120px) rotate(18deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(8deg);
+  }
+}
+
+@keyframes ff-tag-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ff-mark-hit {
+  from {
+    opacity: 0;
+    transform: scale(1.34);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes ff-cross-in {
+  to {
+    transform: scaleX(1) rotate(-8deg);
+  }
+}
+
+@keyframes ff-scan {
+  to {
+    transform: translateX(0);
+  }
+}
